@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="addstudent" method="POST">
+        {% csrf_token %}
+        <label for="">FIRSTNAME</label>
+        <input type="text" name="fname"> <br>  <br>
+        <label for="">LASTNAME</label>
+        <input type="text" name="lname"> <br>  <br> 
+        <label for="">EMAIL</label>
+        <input type="text" name="email"> <br>  <br> 
+        <label for="">USERNAME</label>
+        <input type="text" name="uname"> <br>  <br> 
+        <label for="">PASSWORD</label>
+        <input type="text" name="password"> <br>  <br>  
+        <label for="">PHONE</label>
+        <input type="text" name="phone"> <br>  <br>
+        <label for="">PLACE</label>
+        <input type="text" name="place"> <br>  <br>
+        <label for="">DEPARTMENT</label>
+        
+        <select name="did" id="">
+        {% for i in data %}
+        <option value="{{i.id}}">{{i.Dep_Name}}</option>
+        {% endfor %}
+        </select> <br> <br>
+        <input type="submit" value="REGISTER">
+    </form>
+</body>
+</html>
+</body>
+</html>
