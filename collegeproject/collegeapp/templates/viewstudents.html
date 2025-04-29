@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,5 +25,80 @@
         </tr>
         {% endfor %}
     </table>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Approval</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Pending Student Approvals</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Department</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{ i.stud_id.first_name }}</td>
+                <td>{{ i.stud_id.last_name }}</td>
+                <td>{{ i.stud_id.email }}</td> <!-- Fixed: Show email here -->
+                <td>{{ i.phone }}</td>
+                <td>{{ i.dep_id.Dep_Name }}</td>
+                <td><a href="/admin_approve_students/{{ i.id }}">Approve</a></td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No students pending approval.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
 </body>
 </html>

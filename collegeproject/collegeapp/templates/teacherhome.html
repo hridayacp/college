@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,65 @@
 <body>
     <h1>TEACHER HOME</h1>
     <a href="{% url 'logouts' %}">logout</a>
-    <!-- <a href="{% url 'updateteacher' %}">Update Profile</a> -->
-    <!-- <a href="{% url 'viewactivestudents' %}">View Students</a> -->
+    <a href="{% url 'updateteacher' %}">Update Profile</a>
+    <a href="{% url 'viewstudents' %}">View Students</a>
 
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TEACHER HOME</h1>
+        <a href="{% url 'logouts' %}">Logout</a>
+        <a href="{% url 'updateteacher' %}">Update Profile</a>
+        <a href="{% url 'viewactivestudents' %}">View Students</a>
+    </div>
 </body>
 </html>

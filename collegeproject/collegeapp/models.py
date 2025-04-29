@@ -23,6 +23,9 @@ class student(models.Model):
     phone=models.BigIntegerField()
     place=models.CharField(max_length=100)
 
+class Staff(models.Model):
+    name=models.CharField(max_length=100)
+    photo=models.ImageField(upload_to='staff_photo/')
 
 
 # Create your models here.
