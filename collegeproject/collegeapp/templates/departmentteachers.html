@@ -6,14 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Department-wise Students </h1>
+    <h1>Department-wise Teachers </h1>
 {% for item in data %}
-    <h2>Department: {{ item.department.Dep_Name }}</h2>
+    <h2>Department: {{item.department.Dep_Name }}</h2>
     <ul>
-        {% for s in item.students %}
-            <li>{{ s.stud_id.first_name }} {{ s.stud_id.last_name }} - {{ s.place }}</li>
+        {% for t in item.teachers %}
+            <li>{{ t.teach_id.first_name }} {{ t.teach_id.last_name }} - {{ t.Qualification }}</li>
         {% empty %}
-            <li>No students in this department.</li>
+            <li>No teachers in this department.</li>
         {% endfor %}
     </ul>
     <hr>

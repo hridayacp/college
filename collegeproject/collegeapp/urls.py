@@ -25,6 +25,9 @@ urlpatterns = [
     path('viewactivestudents',views.viewactivestudents,name='viewactivestudents'),
     path('staff_register',views.staff_register,name='staff_register'),
     path('stafflist',views.stafflist,name='stafflist'),
+    path('departmentwise_teachers',views.departmentwise_teachers,name='departmentwise_teachers'),
+    path('departmentwise_activestudents',views.departmentwise_activestudents,name='departmentwise_activestudents'),
+
 
 
 ]

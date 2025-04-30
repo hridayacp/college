@@ -178,7 +178,7 @@ def stafflist(request):
     return render(request,'stafflist.html',{'staff':staff})
 
 
-def viewdepteachers(request):
+def departmentwise_teachers(request):
     departments=Department.objects.all()
     data =[]
 
@@ -191,7 +191,7 @@ def viewdepteachers(request):
     return render(request, 'departmentteachers.html',{'data':data})
 
 
-def viewdepteachers_activestudents(request):
+def departmentwise_activestudents(request):
     departments=Department.objects.all()
     data =[]
 
